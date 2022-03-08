@@ -43,7 +43,7 @@ public boolean isWon()
   int won = 0;
   for (int r = 0; r<NUM_ROWS; r++) {
     for (int c = 0; c<NUM_COLS; c++) {
-      if (buttons[r][c].clicked == true) {
+      if (buttons[r][c].clicked == true && !mines.contains(buttons[r][c])) {
         won ++;
       }
     }
